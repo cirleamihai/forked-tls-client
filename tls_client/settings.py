@@ -1,7 +1,7 @@
 from typing_extensions import Literal, TypeAlias
 
 ClientIdentifiers: TypeAlias = Literal[
-    # Chrome
+    # Chrome Versions
     "chrome_103",
     "chrome_104",
     "chrome_105",
@@ -16,16 +16,23 @@ ClientIdentifiers: TypeAlias = Literal[
     "chrome_116_PSK_PQ",
     "chrome_117",
     "chrome_120",
-    # Safari
+    "chrome_124",
+    "chrome_131",
+    "chrome_131_PSK",
+    "chrome_133",
+    "chrome_133_PSK",
+
+    # Safari Versions
     "safari_15_6_1",
     "safari_16_0",
-    # iOS (Safari)
+    "safari_ipad_15_6",
     "safari_ios_15_5",
     "safari_ios_15_6",
     "safari_ios_16_0",
-    # iPadOS (Safari)
-    "safari_ios_15_6",
-    # FireFox
+    "safari_ios_17_0",
+    "safari_ios_18_0",
+
+    # Firefox Versions
     "firefox_102",
     "firefox_104",
     "firefox_105",
@@ -34,11 +41,46 @@ ClientIdentifiers: TypeAlias = Literal[
     "firefox_110",
     "firefox_117",
     "firefox_120",
-    # Opera
+    "firefox_123",
+    "firefox_132",
+    "firefox_133",
+    "firefox_135",
+
+    # Opera Versions
     "opera_89",
     "opera_90",
     "opera_91",
-    # OkHttp4
+
+    # Zalando Clients
+    "zalando_android_mobile",
+    "zalando_ios_mobile",
+
+    # Nike Clients
+    "nike_ios_mobile",
+    "nike_android_mobile",
+
+    # Cloudflare Custom
+    "cloudscraper",
+
+    # MMS iOS Variants
+    "mms_ios",
+    "mms_ios_1",
+    "mms_ios_2",
+    "mms_ios_3",
+
+    # Mesh Clients
+    "mesh_ios",
+    "mesh_ios_1",
+    "mesh_ios_2",
+    "mesh_android",
+    "mesh_android_1",
+    "mesh_android_2",
+
+    # Confirmed App Clients
+    "confirmed_ios",
+    "confirmed_android",
+
+    # OkHttp Android Versions
     "okhttp4_android_7",
     "okhttp4_android_8",
     "okhttp4_android_9",
@@ -46,19 +88,4 @@ ClientIdentifiers: TypeAlias = Literal[
     "okhttp4_android_11",
     "okhttp4_android_12",
     "okhttp4_android_13",
-    # Custom
-    "zalando_ios_mobile",
-    "zalando_android_mobile",
-    "nike_ios_mobile",
-    "nike_android_mobile",
-    "mms_ios",
-    "mms_ios_2",
-    "mms_ios_3",
-    "mesh_ios",
-    "mesh_ios_2",
-    "mesh_android",
-    "mesh_android_2",
-    "confirmed_ios",
-    "confirmed_android",
-    "confirmed_android_2",
 ]
