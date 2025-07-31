@@ -427,7 +427,11 @@ class Session:
             request_payload["withRandomTLSExtensionOrder"] = self.random_tls_extension_order
 
         # this is a pointer to the response
+        if method == "POST":
+            print("[FLORIAN TLS] Making the request to the TLS client...")
         response = request(dumps(request_payload).encode('utf-8'))
+        if method == "POST":
+            print("[FLORIAN TLS] Made the request")
         # dereference the pointer to a byte array
         response_bytes = ctypes.string_at(response)
         # convert our byte array to a string (tls client returns json)
