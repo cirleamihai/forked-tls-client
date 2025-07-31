@@ -11,10 +11,10 @@ elif platform in ('win32', 'cygwin'):
 else:
     if machine() == "aarch64":
         file_ext = '-arm64.so'
-    elif "x86" in machine():
-        file_ext = '-x86.so'
-    else:
+    elif "x86" in machine() or "amd64" in machine():
         file_ext = '-amd64.so'
+    else:
+        raise Exception(f"Unsupported platform: {machine()}")
 
 root_dir = os.path.abspath(os.path.dirname(__file__))
 library = ctypes.cdll.LoadLibrary(f'{root_dir}/dependencies/tls-client{file_ext}')
