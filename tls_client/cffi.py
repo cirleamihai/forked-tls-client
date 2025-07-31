@@ -9,12 +9,17 @@ if platform == 'darwin':
 elif platform in ('win32', 'cygwin'):
     file_ext = '-64.dll' if 8 == ctypes.sizeof(ctypes.c_voidp) else '-32.dll'
 else:
-    if machine() == "aarch64":
-        file_ext = '-arm64.so'
-    elif "x86" in machine() or "amd64" in machine():
-        file_ext = '-amd64.so'
+    arch = machine()
+    if arch in ("aarch64", "arm64"):
+        file_ext = "-arm64.so"
+    elif arch in ("x86_64", "amd64"):
+        file_ext = "-amd64.so"
+    elif "x86" in arch:
+        file_ext = "-x86.so"
     else:
-        raise Exception(f"Unsupported platform: {machine()}")
+        raise RuntimeError(f"Unsupported architecture: {arch}")
+
+print("Chose file extension:", file_ext)
 
 root_dir = os.path.abspath(os.path.dirname(__file__))
 library = ctypes.cdll.LoadLibrary(f'{root_dir}/dependencies/tls-client{file_ext}')
