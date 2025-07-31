@@ -19,7 +19,6 @@ else:
     else:
         raise RuntimeError(f"Unsupported architecture: {arch}")
 
-print("Chose file extension:", file_ext)
 
 root_dir = os.path.abspath(os.path.dirname(__file__))
 library = ctypes.cdll.LoadLibrary(f'{root_dir}/dependencies/tls-client{file_ext}')
