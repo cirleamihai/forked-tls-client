@@ -1,5 +1,6 @@
 from typing_extensions import Literal, TypeAlias
 
+# noinspection PyTypeHints
 ClientIdentifiers: TypeAlias = Literal[
     # Chrome Versions
     "chrome_103",
@@ -21,6 +22,8 @@ ClientIdentifiers: TypeAlias = Literal[
     "chrome_131_PSK",
     "chrome_133",
     "chrome_133_PSK",
+    "chrome_144",
+    "chrome_144_PSK"
 
     # Safari Versions
     "safari_15_6_1",
