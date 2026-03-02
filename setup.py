@@ -20,8 +20,7 @@ _BINARY_MAP = {
     "tls-client-arm64.dylib": f"tls-client-darwin-arm64-{SHARED_LIBRARY_VERSION}.dylib",
     "tls-client-x86.dylib": f"tls-client-darwin-amd64-{SHARED_LIBRARY_VERSION}.dylib",
     # Linux
-    "tls-client-amd64.so": f"tls-client-linux-alpine-amd64-{SHARED_LIBRARY_VERSION}.so",
-    "tls-client-x86.so": f"tls-client-linux-ubuntu-amd64-{SHARED_LIBRARY_VERSION}.so",
+    "tls-client-amd64.so": f"tls-client-linux-ubuntu-amd64-{SHARED_LIBRARY_VERSION}.so",
     "tls-client-arm64.so": f"tls-client-linux-arm64-{SHARED_LIBRARY_VERSION}.so",
 }
 
