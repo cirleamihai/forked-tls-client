@@ -8,22 +8,21 @@ import sys
 import urllib.request
 from platform import machine
 
-SHARED_LIBRARY_VERSION = "1.14"
+SHARED_LIBRARY_VERSION = "1.14.0"
 GITHUB_DOWNLOAD_URL = "https://github.com/bogdanfinn/tls-client/releases/download/v{}/{}"
 
 # Mapping: local filename -> github release filename
-# Mirrors the exact mapping from scripts/update_shared_libraries.py
 _BINARY_MAP = {
     # Windows
-    "tls-client-32.dll": f"tls-client-windows-32-v{SHARED_LIBRARY_VERSION}.dll",
-    "tls-client-64.dll": f"tls-client-windows-64-v{SHARED_LIBRARY_VERSION}.dll",
+    "tls-client-32.dll": f"tls-client-windows-32-{SHARED_LIBRARY_VERSION}.dll",
+    "tls-client-64.dll": f"tls-client-windows-64-{SHARED_LIBRARY_VERSION}.dll",
     # macOS
-    "tls-client-arm64.dylib": f"tls-client-darwin-arm64-v{SHARED_LIBRARY_VERSION}.dylib",
-    "tls-client-x86.dylib": f"tls-client-darwin-amd64-v{SHARED_LIBRARY_VERSION}.dylib",
+    "tls-client-arm64.dylib": f"tls-client-darwin-arm64-{SHARED_LIBRARY_VERSION}.dylib",
+    "tls-client-x86.dylib": f"tls-client-darwin-amd64-{SHARED_LIBRARY_VERSION}.dylib",
     # Linux
-    "tls-client-amd64.so": f"tls-client-linux-alpine-amd64-v{SHARED_LIBRARY_VERSION}.so",
-    "tls-client-x86.so": f"tls-client-linux-ubuntu-amd64-v{SHARED_LIBRARY_VERSION}.so",
-    "tls-client-arm64.so": f"tls-client-linux-arm64-v{SHARED_LIBRARY_VERSION}.so",
+    "tls-client-amd64.so": f"tls-client-linux-alpine-amd64-{SHARED_LIBRARY_VERSION}.so",
+    "tls-client-x86.so": f"tls-client-linux-ubuntu-amd64-{SHARED_LIBRARY_VERSION}.so",
+    "tls-client-arm64.so": f"tls-client-linux-arm64-{SHARED_LIBRARY_VERSION}.so",
 }
 
 
