@@ -396,6 +396,7 @@ class Session:
             "headers": dict(headers),
             "headerOrder": self.header_order,
             "insecureSkipVerify": insecure_skip_verify,
+            "disableHttp3": True,
             "isByteRequest": is_byte_request,
             "additionalDecode": self.additional_decode,
             "proxyUrl": proxy,
