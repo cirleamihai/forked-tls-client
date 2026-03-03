@@ -11,7 +11,7 @@ github_repo_filenames = [
     f"tls-client-darwin-amd64-{shared_library_version}.dylib",
     # Linux
     f"tls-client-linux-ubuntu-amd64-{shared_library_version}.so",
-    f"tls-client-linux-ubuntu-amd64-{shared_library_version}.so",
+    f"tls-client-linux-alpine-amd64-{shared_library_version}.so",
     f"tls-client-linux-arm64-{shared_library_version}.so"
 ]
 dependency_filenames = [
