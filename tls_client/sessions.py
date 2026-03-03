@@ -406,6 +406,8 @@ class Session:
             "requestBody": base64.b64encode(request_body).decode() if is_byte_request else request_body,
             "requestCookies": request_cookies,
             "timeoutSeconds": timeout_seconds,
+            "withoutCookieJar": True,
+            "isRotatingProxy": True
         }
         if certificate_pinning:
             request_payload["certificatePinningHosts"] = certificate_pinning
